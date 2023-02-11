@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 import 'dotenv/config';
 
+mongoose.set("strictQuery", false); 
 mongoose.connect(
     process.env.MONGODB_CONNECT_STRING,
     { useNewUrlParser: true }
 );
-
 
 // Connect to to the database
 const db = mongoose.connection;
